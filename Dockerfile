@@ -7,9 +7,7 @@ RUN apt-get update -y
 RUN apt-get install apache2 -y && \
     apt-get clean
 
-COPY index.html /var/www/html/
-
-COPY css /var/www/html/css/
+COPY ./html/ /var/www/html/
 
 WORKDIR /var/www/html/
 
