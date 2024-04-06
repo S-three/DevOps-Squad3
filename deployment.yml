@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-web-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: my-web-app
@@ -17,3 +17,7 @@ spec:
         image: squad3/project:latest
         ports:
         - containerPort: 8001
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
