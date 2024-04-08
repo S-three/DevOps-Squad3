@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Pre-commit hook to validate commit message format.
+
+# Get the commit message from the user
+commit_message=$(cat "$1")
+#echo $commit_message
+# Check if the commit message contains both summary and details sections
+if [[ $commit_message =~ ^\[commit-summary\]:\ .*\ \[commit-details\]:\ .* ]]; then
+   exit 0
+else
+   echo "Error: Commit message must be in the format '[commit-summary]:new [commit-details]: files'"
+   exit 1
+fi
+
+# If the commit message is valid, allow the commit to proceed
+exit 0
