@@ -1,6 +1,6 @@
 FROM ubuntu
 
-MAINTAINER iamsaikishore saikishorepro28@gmail.com
+MAINTAINER affankhan aff.khan34@gmail.com
 
 RUN apt-get update -y
 
